@@ -27,17 +27,17 @@
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.
 
-You're reading it!
+Here we go :)
 
 ### Notebook Analysis
 #### 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
-I have written a method `color_range_hsv` (cell 8) utilising openCV range selection after converting the image to HSV colorspace first for more accurate color selection.
+I have written a method `color_range_hsv` (cell 8) utilising openCV range selection after converting the image to HSV colorspace for more accurate color selection.
 
 For obstacle detection, i considered all pixels not sand as obstacles. Therefore a simple inversion of the navigable terrain shows all obstacles.
 
 
 #### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result.
-* Testvideo for `/output/sample_run/` in `/output/test_mapping.mp4`
+* Testvideo in `/output/test_mapping.mp4`
 
 ### Autonomous Navigation and Mapping
 
@@ -151,6 +151,8 @@ Points of improvement:
 
 - The rover crashes into walls at the end of narrow corridors or sharp right turns.
 Velocity and braking could further be improved maybe by introducing PID dependent on the field of view in front.
+
+- Some edgecases in sample locations may lead to the rover endlessly trying the same approach to retrieve the rock not succeeding.
 
 - There is one location on which my implementation is not able collect rock samples since the rover will always try to approach the sample from the left. Changing this bevaiour would break the routines for all rocks that are hidden in small left turns.
 The optimisation might involve the perception to gain more understanding of the map and path planning.
