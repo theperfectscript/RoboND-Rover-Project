@@ -65,7 +65,8 @@ States:
 `Rover_crawl_left_wall`:
 
 * Tries to follow the left wall by adding a constant bias to the mean navigable angle.
-* Increases turning angle by reducing the top speed with increasing steering angles.
+* Accelerates/decelerates to a dynamic max speed.
+* Improves turning rotation by reducing the speed with increasing steering angles.
 
 Leads to:
 
