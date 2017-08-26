@@ -49,7 +49,7 @@ The methods are similar to those created in the notebook except of
 - line 166 - 174: Here i populate a couple of variables used by decision for navigation and sample recovery.
 
 ##### Decision step:
-I tried to implement the finite state pattern to simplify development.
+I tried to implement the finite state machine pattern to simplify development.
 It is a variation since i did not find a nice way to provide the agent (RoverState instance from drive_rover.py) to the State Machine on initialization. My customization involves sending the RoverState on every update function call.
 
 - State.run updates the Rover and State properties
